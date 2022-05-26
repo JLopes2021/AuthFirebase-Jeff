@@ -1,12 +1,6 @@
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyDtHcbvliuIuMrgN1Uof3WLgxBn92ATlpc",
-    authDomain: "projetofirebase-df20c.firebaseapp.com",
-    projectId: "projetofirebase-df20c",
-    storageBucket: "projetofirebase-df20c.appspot.com",
-    messagingSenderId: "169423907228",
-    appId: "1:169423907228:web:1a0a2d7ec04e7fb98b0059",
-    measurementId: "G-P7PGDYBP6K"
+    //Coloque aqui a configuração do seu firebase
   };
 
 firebase.initializeApp(config);
