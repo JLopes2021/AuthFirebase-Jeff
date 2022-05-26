@@ -1,16 +1,14 @@
 // Initialize Firebase
-var config = {
+const config = {
+    apiKey: "AIzaSyDtHcbvliuIuMrgN1Uof3WLgxBn92ATlpc",
+    authDomain: "projetofirebase-df20c.firebaseapp.com",
+    projectId: "projetofirebase-df20c",
+    storageBucket: "projetofirebase-df20c.appspot.com",
+    messagingSenderId: "169423907228",
+    appId: "1:169423907228:web:1a0a2d7ec04e7fb98b0059",
+    measurementId: "G-P7PGDYBP6K"
+  };
 
-  // incluir aqui os dados do seu projeto
-  
-  apiKey: " ",
-  authDomain: "etec1-43d9d.firebaseapp.com",
-  projectId: " ",
-  storageBucket: ".appspot.com",
-  messagingSenderId: "",
-  appId: " ",
-  measurementId: "G-L4475VW8X5"
-};
 firebase.initializeApp(config);
 
 // Firebase Variables
@@ -87,6 +85,7 @@ function clickSigninButton() {
     console.log(user)
   }, function(error) {
     console.log(error.message);
+    alert(error.message);
     // error message show that you need to enable that authentication in firebase
   });
 

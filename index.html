@@ -1,39 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Firebase User Authentication</title>
-
-  </head>
-  <body>
-    <h3>Firebase</h3>
-    <em>Username and Password Authentication</em>
-      <hr>
-
-    <p>
-      <p id="current-email" style="display:none"></p>
-      <button type="button" id="signout" style="display:none">Signout</button>
-    </p>
-
-    <div id="signup-form">
-      <h4>signup form</h4>
-      <input type="text" id="username" placeholder="enter your username"/><br/>
-      <input type="email" id="email" placeholder="enter your email"><br/>
-      <input type="password" id="password" placeholder="enter your password"/><br/>
-      <button type="button" name="button" id="signup">Signup</button>
-    </div>
-
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="app.css">
+  <title>Autenticação Firebase</title>
+</head>
+<body class="body-class">
   
-    <div id="signin">
-    <h4>signin</h4>
-      <input type="email" id="signinEmail" placeholder="enter your email"><br/>
-      <input type="password" id="signinPassword" placeholder="enter your password"/><br/>
-      <button type="button" name="button" id="signin">Singin</button>
+  <header>
+    <div class="jumbotron">
+      <h1 class="display-4">Firebase</h1>
+      <p class="lead">Este é um simples projeto para mostrar como autenticar um usuário com o firebase.</p>
+      <p>Username and Password Authentication</p>
+      <hr class="my-4">
     </div>
-    <hr/>
+  </header>
 
-
-  </body>
-  <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <div class="container-forms">
+      <div class="row">
+        <div class="col">
+          <div class="form-group col-md-6">
+            <h4>Cadastrar no Sistema</h4>
+            <label for="exampleInputNome">Coloque seu Nome</label><br>
+            <input type="text" id="username" class="form-control" placeholder="Coloque seu nome"/><br/>
+            <label for="exampleInputEmail1">Coloque seu email</label><br>
+            <input type="email" id="email" class="form-control" placeholder="Coloque seu email"><br/>
+            <label for="exampleInputPassword1">Coloque sua Senha</label><br/>
+            <input type="password" id="password" class="form-control" placeholder="Coloque sua senha"/><br/>
+            <button type="button" name="button" id="signup" class="btn btn-info" onclick="clickSignupButton()" >Cadastrar</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group col-md-6" id="signin">
+            <h4>Entrar no Sistema</h4>
+            <label for="exampleInputEmail1">Coloque seu email</label><br>
+              <input type="email" id="signinEmail" class="form-control" placeholder="Coloque seu email"><br/>
+              <label for="exampleInputPassword1">Coloque sua Senha</label><br/>
+              <input type="password" id="signinPassword" class="form-control" placeholder="Coloque sua senha"/><br/>
+              <button class="btn btn-primary" type="button" name="button" id="signin" onclick="clickSigninButton()">Logar</button>
+            </div>
+        </div>
+      </div>
+    
+    </div>
+    <p class="email-logado">
+      <p class="email-logado" id="current-email" style="display:none"></p>
+      <button type="button" id="signout" style="display:none" class="btn btn-danger" onclick="clickSignoutButton()">Sair</button>
+    </p>
+</body>
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
   <script src="app.js"></script>
 </html>

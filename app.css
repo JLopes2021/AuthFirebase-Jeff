@@ -1,0 +1,29 @@
+.body-class{
+    background-color:#96895F;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.container-forms{
+    text-align: center;
+    margin-left: 20%;
+
+}
+.jumbotron{
+    text-align: center;
+}
+
+.display-4{
+    color: #FCA63A;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.info-header-title{
+text-align: center;
+}
+.describe-title{
+    color: #3ADE73;
+    font-weight: bolder;
+}
+.email-logado{
+    color: #2A0A09;
+}
